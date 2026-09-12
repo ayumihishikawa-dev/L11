@@ -19,7 +19,10 @@ movie_point = st.slider("評価",0.0,5.0,step=0.5,format="%.1f")
 movie_review = st.text_area("感想")
 
 st.subheader("ファイルアップロード")
-movie_file = st.file_uploader("チケットをアップロード")
+movie_file = st.file_uploader(
+    "チケットをアップロード",
+    type=["png","jpg","jpeg"],
+    help="PNG,JPG,JPEG形式のみアップロード可能です")
 
 if st.button("保存する"):
     if movie_title:
