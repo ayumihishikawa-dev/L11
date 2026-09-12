@@ -34,3 +34,4 @@ if st.button("保存する"):
         st.success(f"{movie_title}の記録を保存しました")
     else:
         st.warning("作品名を入力してください")
+    

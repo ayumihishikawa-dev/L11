@@ -12,3 +12,4 @@ if records:
         st.write(f"**感想:** {item['review']}")
 else:
     st.info("まだ保存されたデータはありません。")
+    
