@@ -16,4 +16,5 @@ if records:
             st.write("**チケット**")
             st.image({uploaded_file},caption=f"{item['title']}のチケット",use_container_width=True)
 else:
+    
     st.info("まだ保存されたデータはありません。")

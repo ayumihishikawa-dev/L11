@@ -6,6 +6,7 @@ if "movie_records" not in st.session_state:
 
 st.title("映画記録アプリ")
 
+
 movie_title = st.text_input("作品名")
 
 st.subheader("鑑賞日・方法")
