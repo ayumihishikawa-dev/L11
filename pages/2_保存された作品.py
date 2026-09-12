@@ -10,6 +10,6 @@ if records:
         st.subheader(item["title"])
         st.write(f"**鑑賞日:** {item['date']} | **鑑賞方法:** {item['media']} | **評価:** {item['point']}")
         st.write(f"**感想:** {item['review']}")
+        st.write(f"**チケット**{item['file']}")
 else:
     st.info("まだ保存されたデータはありません。")
-    

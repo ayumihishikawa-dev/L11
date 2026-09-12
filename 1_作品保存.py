@@ -28,7 +28,8 @@ if st.button("保存する"):
             "date":str(movie_date),
             "media":movie_media,
             "point":movie_point,
-            "review":movie_review
+            "review":movie_review,
+            "file":movie_file
         }
         st.session_state["movie_records"].append(new_record)
         st.success(f"{movie_title}の記録を保存しました")
