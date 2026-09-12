@@ -8,7 +8,7 @@ records = st.session_state.get("movie_records", [])
 if records:
     for item in records:
         st.subheader(item["title"])
-        st.write(f"**鑑賞日:** {item['date']} | **鑑賞方法:** {item['media']} - {item['service']} | **評価:** {item['point']}")
+        st.write(f"**鑑賞日:** {item['date']} | **鑑賞方法:** {item['media']} | **評価:** {item['point']}")
         st.write(f"**感想:** {item['review']}")
 
         uploaded_file = item.get("file")

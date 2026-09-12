@@ -13,12 +13,12 @@ st.subheader("鑑賞日・方法")
 movie_date  = st.date_input("鑑賞日")
 movie_media = st.radio("鑑賞方法",["動画配信サービス","映画館","試写会","DVD/ブルーレイ/VHS","TV地上波","BS/CS","飛行機","その他"])
 if movie_media == "動画配信サービス":
-    movie_service = st.selectbox("配信サービス",["Amazonプライム","Hulu","Netflix","U-NEXT","ディズニープラス","その他"])
-    if movie_service == "その他":
-        movie_service = st.text_input("サービス名")
+    movie_media = st.selectbox("配信サービス",["Amazonプライム","Hulu","Netflix","U-NEXT","ディズニープラス","その他"])
+    if movie_media == "その他":
+        movie_media = st.text_input("サービス名")
 
 elif movie_media == "映画館":
-    movie_service = st.text_input("劇場名")
+    movie_media = st.text_input("劇場名")
 
 elif movie_media == "その他":
     movie_media = st.text_input("鑑賞方法は？")
@@ -39,7 +39,6 @@ if st.button("保存する"):
             "title":movie_title,
             "date":str(movie_date),
             "media":movie_media,
-            "service":movie_service,
             "point":movie_point,
             "review":movie_review,
             "file":movie_file
