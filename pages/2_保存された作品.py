@@ -14,7 +14,7 @@ if records:
         uploaded_file = item.get("file")
         if uploaded_file is not None:
             st.write("**チケット**")
-            st.image({uploaded_file},caption=f"{item['title']}のチケット",use_container_width=True)
+            st.image({uploaded_file},caption=f"{item['title']}",use_container_width=True)
         st.divider()
 else:
     st.info("まだ保存されたデータはありません。")
