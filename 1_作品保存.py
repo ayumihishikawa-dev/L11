@@ -21,7 +21,7 @@ elif movie_media == "動画配信サービス":
     if movie_media == "その他":
         movie_media = st.text_input("サービス名")
 
-elif movie_media in ["映画館","試写会"]:
+elif movie_media == "映画館":
     movie_media = st.text_input("劇場名")
 
 
