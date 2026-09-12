@@ -15,6 +15,7 @@ if records:
         if uploaded_file is not None:
             st.write("**チケット**")
             st.image({uploaded_file},caption=f"{item['title']}のチケット",use_container_width=True)
+
+    st.divider()
 else:
-    
     st.info("まだ保存されたデータはありません。")
