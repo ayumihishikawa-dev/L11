@@ -12,16 +12,18 @@ movie_title = st.text_input("作品名")
 st.subheader("鑑賞日・方法")
 movie_date  = st.date_input("鑑賞日")
 movie_media = st.radio("鑑賞方法",["動画配信サービス","映画館","試写会","DVD/ブルーレイ/VHS","TV地上波","BS/CS","飛行機","その他"])
-if movie_media == "動画配信サービス":
+
+if movie_media == "その他":
+    movie_media = st.text_input("鑑賞方法は？")
+
+elif movie_media == "動画配信サービス":
     movie_media = st.selectbox("配信サービス",["Amazonプライム","Hulu","Netflix","U-NEXT","ディズニープラス","その他"])
     if movie_media == "その他":
         movie_media = st.text_input("サービス名")
 
-elif movie_media == "映画館":
+elif movie_media in ["映画館","試写会"]:
     movie_media = st.text_input("劇場名")
 
-elif movie_media == "その他":
-    movie_media = st.text_input("鑑賞方法は？")
 
 st.subheader("作品評価")
 movie_point = st.slider("評価",0.0,5.0,step=0.5,format="%.1f")
